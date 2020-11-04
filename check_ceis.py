@@ -26,6 +26,7 @@ def getContratos(ente, exercicio):
     cnpjs = set([contrato['fornecedor']['cpfCnpj']
                  for contrato in contratos])
 
+    # Chave para acessar à API. Para obter a chave acesse http://www.portaldatransparencia.gov.br/api-de-dados/cadastrar-email
     ceis = set([getCeis(cnpj, 'chave')
                 for cnpj in cnpjs])
 
